@@ -31,7 +31,7 @@ def run():
     )
 
     # Membuka file all_df dan membaginya per tahun
-    all_df = pd.read_csv("/workspaces/bike-sharing-dashboard-dwiajiprstyo/all_data.csv")
+    all_df = pd.read_csv("all_data.csv")
     all_df_2011 = all_df.loc[all_df['yr'] == 0]
     all_df_2012 = all_df.loc[all_df['yr'] == 1]
 

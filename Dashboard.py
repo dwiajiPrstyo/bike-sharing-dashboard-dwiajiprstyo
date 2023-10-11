@@ -37,7 +37,7 @@ def run():
 
     # Fungsi menampilkan total peminjaman sepeda pada hari tertentu
     def create_daily_orders_df(df):
-        daily_orders_df = df.resample(rule='D', on='dteday').agg({
+        daily_orders_df = df.resample(rule='D, on='dteday').agg({
             "instant": "nunique",
             "cnt": "sum"
         })

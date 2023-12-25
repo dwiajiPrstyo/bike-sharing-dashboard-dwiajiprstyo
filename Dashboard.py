@@ -108,7 +108,7 @@ def run():
     col1, col2 = st.columns(2)
 
     with col1:
-        total_peminjam = daily_orders_df.cnt.sum()
+        total_peminjam = daily_orders_df.dteday.nunique()
         st.metric("Total Peminjaman Sepeda", value=total_peminjam,delta=int(daily_orders_df.cnt.values[-1]-daily_orders_df.cnt.values[-2]))
 
     with col2:
